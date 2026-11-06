@@ -229,5 +229,13 @@ namespace Task_Mangement
                 txtPassword.ForeColor = Color.Gray;
             }
         }
+
+        private void lblForgotPass_Click(object sender, EventArgs e)
+        {
+            Forget_pass newTask = new Forget_pass();
+
+
+            newTask.ShowDialog();
+        }
     }
 }

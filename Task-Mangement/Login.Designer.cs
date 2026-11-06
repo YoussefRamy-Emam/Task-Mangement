@@ -51,6 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.errorLogin = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblForgotPass = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -161,12 +162,11 @@
             // 
             // lblDesc
             // 
-            this.lblDesc.AutoSize = true;
             this.lblDesc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.ForeColor = System.Drawing.Color.LightGray;
             this.lblDesc.Location = new System.Drawing.Point(27, 142);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(326, 69);
+            this.lblDesc.Size = new System.Drawing.Size(313, 69);
             this.lblDesc.TabIndex = 1;
             this.lblDesc.Text = "Plan tasks with priorities and deadlines,\r\nassign them to teammates, and get\r\nnot" +
     "ified the moment something changes.\r\n";
@@ -185,6 +185,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblForgotPass);
             this.panel2.Controls.Add(this.lblyousef);
             this.panel2.Controls.Add(this.btnlogin);
             this.panel2.Controls.Add(this.checkBox_Remember);
@@ -343,6 +344,20 @@
             // 
             this.errorLogin.ContainerControl = this;
             // 
+            // lblForgotPass
+            // 
+            this.lblForgotPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblForgotPass.AutoSize = true;
+            this.lblForgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblForgotPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(112)))), ((int)(((byte)(138)))));
+            this.lblForgotPass.Location = new System.Drawing.Point(7, 251);
+            this.lblForgotPass.Name = "lblForgotPass";
+            this.lblForgotPass.Size = new System.Drawing.Size(175, 23);
+            this.lblForgotPass.TabIndex = 21;
+            this.lblForgotPass.Text = "Forgot your password";
+            this.lblForgotPass.Click += new System.EventHandler(this.lblForgotPass_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -390,6 +405,7 @@
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Label lblyousef;
         private System.Windows.Forms.ErrorProvider errorLogin;
+        private System.Windows.Forms.Label lblForgotPass;
     }
 }
 

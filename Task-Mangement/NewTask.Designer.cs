@@ -45,10 +45,10 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnlow = new System.Windows.Forms.Button();
-            this.btnmedium = new System.Windows.Forms.Button();
-            this.btnhigh = new System.Windows.Forms.Button();
-            this.btnurgent = new System.Windows.Forms.Button();
+            this.btnUrgent = new System.Windows.Forms.Button();
+            this.btnHigh = new System.Windows.Forms.Button();
+            this.btnMedium = new System.Windows.Forms.Button();
+            this.btnLow = new System.Windows.Forms.Button();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.pnlNotice.SuspendLayout();
@@ -240,6 +240,7 @@
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -248,75 +249,79 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.btnurgent, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnhigh, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnmedium, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnlow, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnUrgent, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnHigh, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnMedium, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnLow, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(41, 418);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(693, 52);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
-            // btnlow
+            // btnUrgent
             // 
-            this.btnlow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnUrgent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnlow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlow.Location = new System.Drawing.Point(0, 0);
-            this.btnlow.Margin = new System.Windows.Forms.Padding(0);
-            this.btnlow.Name = "btnlow";
-            this.btnlow.Size = new System.Drawing.Size(173, 52);
-            this.btnlow.TabIndex = 8;
-            this.btnlow.Text = "Low";
-            this.btnlow.UseVisualStyleBackColor = true;
+            this.btnUrgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrgent.Location = new System.Drawing.Point(519, 0);
+            this.btnUrgent.Margin = new System.Windows.Forms.Padding(0);
+            this.btnUrgent.Name = "btnUrgent";
+            this.btnUrgent.Size = new System.Drawing.Size(174, 52);
+            this.btnUrgent.TabIndex = 11;
+            this.btnUrgent.Text = "Urgent";
+            this.btnUrgent.UseVisualStyleBackColor = true;
+            this.btnUrgent.Click += new System.EventHandler(this.PriorityButton_Click);
             // 
-            // btnmedium
+            // btnHigh
             // 
-            this.btnmedium.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnHigh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnmedium.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnmedium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmedium.ForeColor = System.Drawing.Color.Black;
-            this.btnmedium.Location = new System.Drawing.Point(173, 0);
-            this.btnmedium.Margin = new System.Windows.Forms.Padding(0);
-            this.btnmedium.Name = "btnmedium";
-            this.btnmedium.Size = new System.Drawing.Size(173, 52);
-            this.btnmedium.TabIndex = 9;
-            this.btnmedium.Text = "Medium";
-            this.btnmedium.UseVisualStyleBackColor = false;
+            this.btnHigh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHigh.Location = new System.Drawing.Point(346, 0);
+            this.btnHigh.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHigh.Name = "btnHigh";
+            this.btnHigh.Size = new System.Drawing.Size(173, 52);
+            this.btnHigh.TabIndex = 10;
+            this.btnHigh.Text = "High";
+            this.btnHigh.UseVisualStyleBackColor = true;
+            this.btnHigh.Click += new System.EventHandler(this.PriorityButton_Click);
             // 
-            // btnhigh
+            // btnMedium
             // 
-            this.btnhigh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnMedium.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnhigh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnhigh.Location = new System.Drawing.Point(346, 0);
-            this.btnhigh.Margin = new System.Windows.Forms.Padding(0);
-            this.btnhigh.Name = "btnhigh";
-            this.btnhigh.Size = new System.Drawing.Size(173, 52);
-            this.btnhigh.TabIndex = 10;
-            this.btnhigh.Text = "High";
-            this.btnhigh.UseVisualStyleBackColor = true;
+            this.btnMedium.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnMedium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedium.ForeColor = System.Drawing.Color.Black;
+            this.btnMedium.Location = new System.Drawing.Point(173, 0);
+            this.btnMedium.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMedium.Name = "btnMedium";
+            this.btnMedium.Size = new System.Drawing.Size(173, 52);
+            this.btnMedium.TabIndex = 9;
+            this.btnMedium.Text = "Medium";
+            this.btnMedium.UseVisualStyleBackColor = false;
+            this.btnMedium.Click += new System.EventHandler(this.PriorityButton_Click);
             // 
-            // btnurgent
+            // btnLow
             // 
-            this.btnurgent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnLow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnurgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnurgent.Location = new System.Drawing.Point(519, 0);
-            this.btnurgent.Margin = new System.Windows.Forms.Padding(0);
-            this.btnurgent.Name = "btnurgent";
-            this.btnurgent.Size = new System.Drawing.Size(174, 52);
-            this.btnurgent.TabIndex = 11;
-            this.btnurgent.Text = "Urgent";
-            this.btnurgent.UseVisualStyleBackColor = true;
+            this.btnLow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLow.Location = new System.Drawing.Point(0, 0);
+            this.btnLow.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLow.Name = "btnLow";
+            this.btnLow.Size = new System.Drawing.Size(173, 52);
+            this.btnLow.TabIndex = 8;
+            this.btnLow.Text = "Low";
+            this.btnLow.UseVisualStyleBackColor = true;
+            this.btnLow.Click += new System.EventHandler(this.PriorityButton_Click);
             // 
             // cmbStatus
             // 
@@ -384,10 +389,10 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnlow;
-        private System.Windows.Forms.Button btnurgent;
-        private System.Windows.Forms.Button btnhigh;
-        private System.Windows.Forms.Button btnmedium;
+        private System.Windows.Forms.Button btnLow;
+        private System.Windows.Forms.Button btnUrgent;
+        private System.Windows.Forms.Button btnHigh;
+        private System.Windows.Forms.Button btnMedium;
         private System.Windows.Forms.ComboBox cmbStatus;
     }
 }
