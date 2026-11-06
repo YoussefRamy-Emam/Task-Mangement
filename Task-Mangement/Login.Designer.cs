@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lblFeture3 = new System.Windows.Forms.Label();
             this.lblFeture2 = new System.Windows.Forms.Label();
@@ -42,19 +43,21 @@
             this.btnlogin = new System.Windows.Forms.Button();
             this.checkBox_Remember = new System.Windows.Forms.CheckBox();
             this.checkBox_ShowPass = new System.Windows.Forms.CheckBox();
-            this.TextBoxPass = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.errorLogin = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -186,7 +189,7 @@
             this.panel2.Controls.Add(this.btnlogin);
             this.panel2.Controls.Add(this.checkBox_Remember);
             this.panel2.Controls.Add(this.checkBox_ShowPass);
-            this.panel2.Controls.Add(this.TextBoxPass);
+            this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.textBoxEmail);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
@@ -251,18 +254,20 @@
             this.checkBox_ShowPass.UseVisualStyleBackColor = true;
             this.checkBox_ShowPass.CheckedChanged += new System.EventHandler(this.checkBox_ShowPass_CheckedChanged);
             // 
-            // TextBoxPass
+            // txtPassword
             // 
-            this.TextBoxPass.BackColor = System.Drawing.SystemColors.Menu;
-            this.TextBoxPass.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.TextBoxPass.HideSelection = false;
-            this.TextBoxPass.Location = new System.Drawing.Point(1, 185);
-            this.TextBoxPass.Name = "TextBoxPass";
-            this.TextBoxPass.Size = new System.Drawing.Size(451, 22);
-            this.TextBoxPass.TabIndex = 16;
-            this.TextBoxPass.Text = "P@$$w0rd";
-            this.TextBoxPass.UseSystemPasswordChar = true;
-            this.TextBoxPass.TextChanged += new System.EventHandler(this.TextBoxPass_TextChanged);
+            this.txtPassword.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPassword.HideSelection = false;
+            this.txtPassword.Location = new System.Drawing.Point(1, 185);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(451, 22);
+            this.txtPassword.TabIndex = 16;
+            this.txtPassword.Text = "P@$$w0rd";
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.TextBoxPass_TextChanged);
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // textBoxEmail
             // 
@@ -334,6 +339,10 @@
             this.panel1.Size = new System.Drawing.Size(958, 577);
             this.panel1.TabIndex = 0;
             // 
+            // errorLogin
+            // 
+            this.errorLogin.ContainerControl = this;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -352,6 +361,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorLogin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -374,11 +384,12 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox TextBoxPass;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.CheckBox checkBox_Remember;
         private System.Windows.Forms.CheckBox checkBox_ShowPass;
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Label lblyousef;
+        private System.Windows.Forms.ErrorProvider errorLogin;
     }
 }
 

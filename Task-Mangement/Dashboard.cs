@@ -168,6 +168,27 @@ namespace Task_Mangement
         {
 
         }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNewTask_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(btnNewTask, new Point(0, btnNewTask.Height));
+
+        }
+
+        private void newPersonalTaskToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     

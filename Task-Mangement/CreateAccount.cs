@@ -42,13 +42,13 @@ namespace Task_Mangement
         {
             if(checkBox_ShowPass.Checked)
             {
-                textBoxPass.UseSystemPasswordChar = false;
-                textBoxConfPass.UseSystemPasswordChar = false;
+                txtPassword.UseSystemPasswordChar = false;
+                txtConfirmPassword.UseSystemPasswordChar = false;
             }
             else
             {
-                textBoxPass.UseSystemPasswordChar = true;
-                textBoxConfPass.UseSystemPasswordChar = true;
+                txtPassword.UseSystemPasswordChar = true;
+                txtConfirmPassword.UseSystemPasswordChar = true;
             }
         }
 
@@ -69,10 +69,126 @@ namespace Task_Mangement
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            
+            ErrorCreateAcc.Clear();
+            bool isValid = true;
 
-            MessageBox.Show("Account created successfully; please log in.", "success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            if (string.IsNullOrWhiteSpace(txtUserName.Text))
+            {
+                ErrorCreateAcc.SetError(txtUserName, "Please enter a username.");
+                isValid = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtemail.Text))
+            {
+                ErrorCreateAcc.SetError(txtemail, "Please enter an email address.");
+                isValid = false;
+            }
+
+            if (txtPassword.Text.Length < 6)
+            {
+                ErrorCreateAcc.SetError(txtPassword, "Password must be at least 6 characters long.");
+                isValid = false;
+            }
+
+            if (txtPassword.Text != txtConfirmPassword.Text)
+            {
+                ErrorCreateAcc.SetError(txtConfirmPassword, "Passwords do not match.");
+                isValid = false;
+            }
+            if(!isValid)
+            {
+                MessageBox.Show("Please correct the errors and try again. \n All fields must be filled in, and the password must be at least 8 characters long.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                
+            }
+            else
+            {
+                MessageBox.Show("Account created successfully; please log in.", "success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             this.Close();   
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUserName_Enter(object sender, EventArgs e)
+        {
+            if (txtUserName.Text == "Your name")
+            {
+                txtUserName.Text = "";
+                txtUserName.ForeColor = Color.Black; 
+            }
+        }
+
+        private void txtUserName_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUserName.Text))
+            {
+                txtUserName.Text = "Your name";
+                txtUserName.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtemail_Enter(object sender, EventArgs e)
+        {
+            if (txtemail.Text == "Name@Gmail.com")
+            {
+                txtemail.Text = "";
+                txtemail.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtemail_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtemail.Text))
+            {
+                txtemail.Text = "Name@Gmail.com";
+                txtemail.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtemail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "P@$$w0rd")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                txtPassword.Text = "P@$$w0rd";
+                txtPassword.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtConfirmPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtConfirmPassword.Text == "P@$$w0rd")
+            {
+                txtConfirmPassword.Text = "";
+                txtConfirmPassword.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtConfirmPassword_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtConfirmPassword.Text))
+            {
+                txtConfirmPassword.Text = "P@$$w0rd";
+                txtConfirmPassword.ForeColor = Color.Gray;
+            }
         }
     }
 }

@@ -98,6 +98,38 @@ namespace Task_Mangement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            errorLogin.Clear();
+            bool isValid = true;
+
+
+            
+
+            if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
+            {
+                errorLogin.SetError(textBoxEmail, "Please enter an email address.");
+                isValid = false;
+            }
+
+            if (txtPassword.Text.Length < 6)
+            {
+                errorLogin.SetError(txtPassword, "Password must be at least 6 characters long.");
+                isValid = false;
+            }
+
+            
+            if (!isValid)
+            {
+                MessageBox.Show("Please enter correct the Email and Password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Login successfully.", "success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+
+
             Dashboard dashboard = new Dashboard();
 
             this.Hide();
@@ -131,11 +163,11 @@ namespace Task_Mangement
         {
             if(checkBox_ShowPass.Checked)
             {
-                TextBoxPass.UseSystemPasswordChar = false;
+                txtPassword.UseSystemPasswordChar = false;
             }
             else
             {
-                TextBoxPass.UseSystemPasswordChar = true;
+                txtPassword.UseSystemPasswordChar = true;
             }
         }
 
@@ -151,14 +183,21 @@ namespace Task_Mangement
 
         private void textBoxEmail_Enter(object sender, EventArgs e)
         {
-            textBoxEmail.Text = "";
-            textBoxEmail.ForeColor = Color.Black;
+            if (textBoxEmail.Text == "Name@Gmail.com")
+            {
+                textBoxEmail.Text = "";
+                textBoxEmail.ForeColor = Color.Black;
+            }
         }
 
         private void textBoxEmail_Leave(object sender, EventArgs e)
         {
-            textBoxEmail.Text = "Name@Gmail.com"; 
-            textBoxEmail.ForeColor = Color.Gray;
+            if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
+            {
+                textBoxEmail.Text = "Name@Gmail.com";
+                textBoxEmail.ForeColor = Color.Gray;
+            }
+            
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
@@ -169,6 +208,26 @@ namespace Task_Mangement
         private void btnlogin_MouseCaptureChanged(object sender, EventArgs e)
         {
 
+        }
+
+  
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "P@$$w0rd")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                txtPassword.Text = "P@$$w0rd";
+                txtPassword.ForeColor = Color.Gray;
+            }
         }
     }
 }

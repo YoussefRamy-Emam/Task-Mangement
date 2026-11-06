@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.components = new System.ComponentModel.Container();
+            this.pnlSBMainDashboard = new System.Windows.Forms.Panel();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.btnSignOut = new System.Windows.Forms.Button();
@@ -87,6 +88,9 @@
             this.lblTimeNotif = new System.Windows.Forms.Label();
             this.lblMessageNotif = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotalTasks = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pbCompletion = new System.Windows.Forms.ProgressBar();
             this.label8 = new System.Windows.Forms.Label();
@@ -104,10 +108,19 @@
             this.btnNewTask = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblTotalTasks = new System.Windows.Forms.Label();
-            this.pnlSidebar.SuspendLayout();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.newPersonalTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newProjectTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlSBMainDashboard.SuspendLayout();
             this.plnMainDashboard.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -121,34 +134,36 @@
             this.flowLayoutPanelSearch.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlSidebar
+            // pnlSBMainDashboard
             // 
-            this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
-            this.pnlSidebar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSidebar.Controls.Add(this.lblEmail);
-            this.pnlSidebar.Controls.Add(this.lblUserName);
-            this.pnlSidebar.Controls.Add(this.btnSignOut);
-            this.pnlSidebar.Controls.Add(this.lblNumNotif);
-            this.pnlSidebar.Controls.Add(this.btnNotifications);
-            this.pnlSidebar.Controls.Add(this.btnReports);
-            this.pnlSidebar.Controls.Add(this.btnWorkFlowBoard);
-            this.pnlSidebar.Controls.Add(this.btnProjects);
-            this.pnlSidebar.Controls.Add(this.lblTaskify);
-            this.pnlSidebar.Controls.Add(this.btnNavDashboard);
-            this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSidebar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
-            this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
-            this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(256, 760);
-            this.pnlSidebar.TabIndex = 0;
-            this.pnlSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSidebar_Paint);
+            this.pnlSBMainDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
+            this.pnlSBMainDashboard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSBMainDashboard.Controls.Add(this.lblEmail);
+            this.pnlSBMainDashboard.Controls.Add(this.lblUserName);
+            this.pnlSBMainDashboard.Controls.Add(this.btnSignOut);
+            this.pnlSBMainDashboard.Controls.Add(this.lblNumNotif);
+            this.pnlSBMainDashboard.Controls.Add(this.btnNotifications);
+            this.pnlSBMainDashboard.Controls.Add(this.btnReports);
+            this.pnlSBMainDashboard.Controls.Add(this.btnWorkFlowBoard);
+            this.pnlSBMainDashboard.Controls.Add(this.btnProjects);
+            this.pnlSBMainDashboard.Controls.Add(this.lblTaskify);
+            this.pnlSBMainDashboard.Controls.Add(this.btnNavDashboard);
+            this.pnlSBMainDashboard.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSBMainDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
+            this.pnlSBMainDashboard.Location = new System.Drawing.Point(0, 0);
+            this.pnlSBMainDashboard.Name = "pnlSBMainDashboard";
+            this.pnlSBMainDashboard.Size = new System.Drawing.Size(256, 760);
+            this.pnlSBMainDashboard.TabIndex = 0;
+            this.pnlSBMainDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSidebar_Paint);
             // 
             // lblEmail
             // 
@@ -347,6 +362,13 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.05937F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.78108F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.21336F));
+            this.tableLayoutPanel3.Controls.Add(this.panel8, 6, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label23, 5, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label22, 4, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label21, 3, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label20, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label19, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label18, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.panel7, 6, 1);
             this.tableLayoutPanel3.Controls.Add(this.label17, 5, 1);
             this.tableLayoutPanel3.Controls.Add(this.label16, 4, 1);
@@ -805,6 +827,8 @@
             // 
             this.cmbProject.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cmbProject.FormattingEnabled = true;
+            this.cmbProject.Items.AddRange(new object[] {
+            "None(Personal)"});
             this.cmbProject.Location = new System.Drawing.Point(3, 26);
             this.cmbProject.Name = "cmbProject";
             this.cmbProject.Size = new System.Drawing.Size(171, 36);
@@ -841,6 +865,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
             "All",
+            "To do",
             "inprogress",
             "done"});
             this.cmbStatus.Location = new System.Drawing.Point(3, 26);
@@ -878,6 +903,7 @@
             this.cmbPriority.FormattingEnabled = true;
             this.cmbPriority.Items.AddRange(new object[] {
             "All",
+            "urgent",
             "high",
             "meduim",
             "low"});
@@ -975,6 +1001,39 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1078, 114);
             this.tableLayoutPanel1.TabIndex = 15;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblTotalTasks);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(10, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(195, 94);
+            this.panel1.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 41);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "24";
+            // 
+            // lblTotalTasks
+            // 
+            this.lblTotalTasks.AutoSize = true;
+            this.lblTotalTasks.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalTasks.ForeColor = System.Drawing.Color.DimGray;
+            this.lblTotalTasks.Location = new System.Drawing.Point(6, 6);
+            this.lblTotalTasks.Name = "lblTotalTasks";
+            this.lblTotalTasks.Size = new System.Drawing.Size(129, 31);
+            this.lblTotalTasks.TabIndex = 0;
+            this.lblTotalTasks.Text = "Total Tasks";
             // 
             // panel5
             // 
@@ -1154,6 +1213,7 @@
             this.btnNewTask.TabIndex = 13;
             this.btnNewTask.Text = "+ New task";
             this.btnNewTask.UseVisualStyleBackColor = false;
+            this.btnNewTask.Click += new System.EventHandler(this.btnNewTask_Click);
             // 
             // label1
             // 
@@ -1167,38 +1227,146 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Taskify";
             // 
-            // panel1
+            // label18
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lblTotalTasks);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(10, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(10);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(195, 94);
-            this.panel1.TabIndex = 5;
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(3, 106);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(260, 53);
+            this.label18.TabIndex = 45;
+            this.label18.Text = "Design";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // label19
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 41);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "24";
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(269, 106);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(126, 53);
+            this.label19.TabIndex = 46;
+            this.label19.Text = "None(Personal)";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
-            // lblTotalTasks
+            // label20
             // 
-            this.lblTotalTasks.AutoSize = true;
-            this.lblTotalTasks.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalTasks.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTotalTasks.Location = new System.Drawing.Point(6, 6);
-            this.lblTotalTasks.Name = "lblTotalTasks";
-            this.lblTotalTasks.Size = new System.Drawing.Size(129, 31);
-            this.lblTotalTasks.TabIndex = 0;
-            this.lblTotalTasks.Text = "Total Tasks";
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(401, 106);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(123, 53);
+            this.label20.TabIndex = 47;
+            this.label20.Text = "Low";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(530, 106);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(123, 53);
+            this.label21.TabIndex = 48;
+            this.label21.Text = "In Progress";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(659, 106);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(123, 53);
+            this.label22.TabIndex = 49;
+            this.label22.Text = "El3amed";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(788, 106);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(121, 53);
+            this.label23.TabIndex = 50;
+            this.label23.Text = "Nov 12";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.SystemColors.Window;
+            this.panel8.Controls.Add(this.button3);
+            this.panel8.Controls.Add(this.button4);
+            this.panel8.Location = new System.Drawing.Point(915, 109);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(160, 47);
+            this.panel8.TabIndex = 51;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Window;
+            this.button3.Location = new System.Drawing.Point(77, 8);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(73, 30);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Delete";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Window;
+            this.button4.Location = new System.Drawing.Point(8, 8);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(60, 30);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Edit";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newPersonalTaskToolStripMenuItem,
+            this.newProjectTaskToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            // 
+            // newPersonalTaskToolStripMenuItem
+            // 
+            this.newPersonalTaskToolStripMenuItem.Name = "newPersonalTaskToolStripMenuItem";
+            this.newPersonalTaskToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.newPersonalTaskToolStripMenuItem.Text = "New Personal Task";
+            this.newPersonalTaskToolStripMenuItem.Click += new System.EventHandler(this.newPersonalTaskToolStripMenuItem_Click);
+            // 
+            // newProjectTaskToolStripMenuItem
+            // 
+            this.newProjectTaskToolStripMenuItem.Name = "newProjectTaskToolStripMenuItem";
+            this.newProjectTaskToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.newProjectTaskToolStripMenuItem.Text = "New Project Task";
             // 
             // Dashboard
             // 
@@ -1206,12 +1374,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 760);
             this.Controls.Add(this.plnMainDashboard);
-            this.Controls.Add(this.pnlSidebar);
+            this.Controls.Add(this.pnlSBMainDashboard);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
-            this.pnlSidebar.ResumeLayout(false);
-            this.pnlSidebar.PerformLayout();
+            this.pnlSBMainDashboard.ResumeLayout(false);
+            this.pnlSBMainDashboard.PerformLayout();
             this.plnMainDashboard.ResumeLayout(false);
             this.plnMainDashboard.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -1234,6 +1402,8 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1242,15 +1412,15 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlSidebar;
+        private System.Windows.Forms.Panel pnlSBMainDashboard;
         private System.Windows.Forms.Label lblNumNotif;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblTaskify;
@@ -1329,5 +1499,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTotalTasks;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem newPersonalTaskToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newProjectTaskToolStripMenuItem;
     }
 }

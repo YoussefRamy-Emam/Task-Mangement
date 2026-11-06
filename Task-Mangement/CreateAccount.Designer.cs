@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lblFeture3 = new System.Windows.Forms.Label();
@@ -38,25 +39,27 @@
             this.lblDote2 = new System.Windows.Forms.Label();
             this.lblDesc = new System.Windows.Forms.Label();
             this.lblTaskify = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBoxConfPass = new System.Windows.Forms.TextBox();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.lbl_ConfirmPass = new System.Windows.Forms.Label();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.checkBox_ShowPass = new System.Windows.Forms.CheckBox();
-            this.textBoxPass = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblCreateAccount = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ErrorCreateAcc = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorCreateAcc)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,7 +94,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.txtUserName);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
@@ -188,14 +191,38 @@
             this.lblTaskify.TabIndex = 0;
             this.lblTaskify.Text = "Taskify";
             // 
+            // txtUserName
+            // 
+            this.txtUserName.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtUserName.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtUserName.Location = new System.Drawing.Point(58, 165);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(454, 22);
+            this.txtUserName.TabIndex = 23;
+            this.txtUserName.Text = "Your name";
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
+            this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
+            this.txtUserName.Leave += new System.EventHandler(this.txtUserName_Leave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(47)))), ((int)(((byte)(94)))));
+            this.label1.Location = new System.Drawing.Point(61, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 23);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "User name";
+            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBoxConfPass);
+            this.panel2.Controls.Add(this.txtConfirmPassword);
             this.panel2.Controls.Add(this.lbl_ConfirmPass);
             this.panel2.Controls.Add(this.btnCreateAccount);
             this.panel2.Controls.Add(this.checkBox_ShowPass);
-            this.panel2.Controls.Add(this.textBoxPass);
-            this.panel2.Controls.Add(this.textBoxEmail);
+            this.panel2.Controls.Add(this.txtPassword);
+            this.panel2.Controls.Add(this.txtemail);
             this.panel2.Controls.Add(this.lblLogin);
             this.panel2.Controls.Add(this.lblPassword);
             this.panel2.Controls.Add(this.lblEmail);
@@ -203,21 +230,23 @@
             this.panel2.Controls.Add(this.lblCreateAccount);
             this.panel2.Location = new System.Drawing.Point(57, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(466, 447);
+            this.panel2.Size = new System.Drawing.Size(493, 450);
             this.panel2.TabIndex = 0;
             // 
-            // textBoxConfPass
+            // txtConfirmPassword
             // 
-            this.textBoxConfPass.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxConfPass.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBoxConfPass.HideSelection = false;
-            this.textBoxConfPass.Location = new System.Drawing.Point(1, 269);
-            this.textBoxConfPass.Name = "textBoxConfPass";
-            this.textBoxConfPass.Size = new System.Drawing.Size(451, 22);
-            this.textBoxConfPass.TabIndex = 21;
-            this.textBoxConfPass.Text = "P@$$w0rd";
-            this.textBoxConfPass.UseSystemPasswordChar = true;
-            this.textBoxConfPass.TextChanged += new System.EventHandler(this.textBoxConfPass_TextChanged);
+            this.txtConfirmPassword.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtConfirmPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtConfirmPassword.HideSelection = false;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(1, 269);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(451, 22);
+            this.txtConfirmPassword.TabIndex = 21;
+            this.txtConfirmPassword.Text = "P@$$w0rd";
+            this.txtConfirmPassword.UseSystemPasswordChar = true;
+            this.txtConfirmPassword.TextChanged += new System.EventHandler(this.textBoxConfPass_TextChanged);
+            this.txtConfirmPassword.Enter += new System.EventHandler(this.txtConfirmPassword_Enter);
+            this.txtConfirmPassword.Leave += new System.EventHandler(this.txtConfirmPassword_Leave);
             // 
             // lbl_ConfirmPass
             // 
@@ -235,9 +264,9 @@
             this.btnCreateAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreateAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(47)))), ((int)(((byte)(94)))));
             this.btnCreateAccount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCreateAccount.Location = new System.Drawing.Point(11, 355);
+            this.btnCreateAccount.Location = new System.Drawing.Point(11, 357);
             this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(442, 53);
+            this.btnCreateAccount.Size = new System.Drawing.Size(469, 53);
             this.btnCreateAccount.TabIndex = 19;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
@@ -257,28 +286,33 @@
             this.checkBox_ShowPass.UseVisualStyleBackColor = true;
             this.checkBox_ShowPass.CheckedChanged += new System.EventHandler(this.checkBox_ShowPass_CheckedChanged_1);
             // 
-            // textBoxPass
+            // txtPassword
             // 
-            this.textBoxPass.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxPass.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBoxPass.HideSelection = false;
-            this.textBoxPass.Location = new System.Drawing.Point(1, 215);
-            this.textBoxPass.Name = "textBoxPass";
-            this.textBoxPass.Size = new System.Drawing.Size(453, 22);
-            this.textBoxPass.TabIndex = 16;
-            this.textBoxPass.Text = "P@$$w0rd";
-            this.textBoxPass.UseSystemPasswordChar = true;
-            this.textBoxPass.TextChanged += new System.EventHandler(this.textBoxPass_TextChanged);
+            this.txtPassword.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPassword.HideSelection = false;
+            this.txtPassword.Location = new System.Drawing.Point(1, 215);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(453, 22);
+            this.txtPassword.TabIndex = 16;
+            this.txtPassword.Text = "P@$$w0rd";
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.textBoxPass_TextChanged);
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
-            // textBoxEmail
+            // txtemail
             // 
-            this.textBoxEmail.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxEmail.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBoxEmail.Location = new System.Drawing.Point(0, 160);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(454, 22);
-            this.textBoxEmail.TabIndex = 15;
-            this.textBoxEmail.Text = "Name@Gmail.com";
+            this.txtemail.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtemail.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtemail.Location = new System.Drawing.Point(0, 160);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(454, 22);
+            this.txtemail.TabIndex = 15;
+            this.txtemail.Text = "Name@Gmail.com";
+            this.txtemail.TextChanged += new System.EventHandler(this.txtemail_TextChanged);
+            this.txtemail.Enter += new System.EventHandler(this.txtemail_Enter);
+            this.txtemail.Leave += new System.EventHandler(this.txtemail_Leave);
             // 
             // lblLogin
             // 
@@ -287,7 +321,7 @@
             this.lblLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(112)))), ((int)(((byte)(138)))));
-            this.lblLogin.Location = new System.Drawing.Point(401, 415);
+            this.lblLogin.Location = new System.Drawing.Point(428, 418);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(52, 23);
             this.lblLogin.TabIndex = 14;
@@ -338,26 +372,9 @@
             this.lblCreateAccount.TabIndex = 9;
             this.lblCreateAccount.Text = "Create Account";
             // 
-            // textBox1
+            // ErrorCreateAcc
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox1.Location = new System.Drawing.Point(58, 165);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(454, 22);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.Text = "Your name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(47)))), ((int)(((byte)(94)))));
-            this.label1.Location = new System.Drawing.Point(61, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 23);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "User name";
+            this.ErrorCreateAcc.ContainerControl = this;
             // 
             // CreateAccount
             // 
@@ -379,6 +396,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorCreateAcc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,16 +416,17 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCreateAccount;
         private System.Windows.Forms.CheckBox checkBox_ShowPass;
-        private System.Windows.Forms.TextBox textBoxPass;
-        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblCreateAccount;
-        private System.Windows.Forms.TextBox textBoxConfPass;
+        private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Label lbl_ConfirmPass;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider ErrorCreateAcc;
     }
 }
