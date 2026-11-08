@@ -583,6 +583,32 @@ namespace Task_Mangement
         {
 
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            plnMainDashboard.Controls.Clear();
+            pnlSBMainDashboard.Controls.Clear();
+
+            ProfileForm profileForm = new ProfileForm();
+
+            Control mainProfilePanel = profileForm.Controls["plnProfile"];
+            Control sidebarProfilePanel = profileForm.Controls["ProfileBar"];
+
+
+            if (mainProfilePanel != null)
+            {
+                mainProfilePanel.Dock = DockStyle.Fill;
+                plnMainDashboard.Controls.Add(mainProfilePanel);
+            }
+
+
+            if (sidebarProfilePanel != null)
+            {
+                sidebarProfilePanel.Dock = DockStyle.Fill;
+                pnlSBMainDashboard.Controls.Add(sidebarProfilePanel);
+            }
+
+        }
     }
 
     

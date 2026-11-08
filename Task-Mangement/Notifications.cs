@@ -111,5 +111,34 @@ namespace Task_Mangement
         {
 
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+
+            pnlMainNotif.Controls.Clear();
+            pnlSBNotif.Controls.Clear();
+
+
+
+            ProfileForm profileForm = new ProfileForm();
+
+            Control mainProfilePanel = profileForm.Controls["plnProfile"];
+            Control sidebarProfilePanel = profileForm.Controls["ProfileBar"];
+
+
+            if (mainProfilePanel != null)
+            {
+                mainProfilePanel.Dock = DockStyle.Fill;
+                pnlMainNotif.Controls.Add(mainProfilePanel);
+            }
+
+
+            if (sidebarProfilePanel != null)
+            {
+                sidebarProfilePanel.Dock = DockStyle.Fill;
+                pnlSBNotif.Controls.Add(sidebarProfilePanel);
+            }
+
+        }
     }
 }

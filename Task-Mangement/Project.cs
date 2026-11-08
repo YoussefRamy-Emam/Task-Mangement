@@ -430,5 +430,31 @@ namespace Task_Mangement
         {
 
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            plnProject.Controls.Clear();
+            pnlSBProject.Controls.Clear();
+
+            ProfileForm profileForm = new ProfileForm();
+
+            Control mainProfilePanel = profileForm.Controls["plnProfile"];
+            Control sidebarProfilePanel = profileForm.Controls["ProfileBar"];
+
+
+            if (mainProfilePanel != null)
+            {
+                mainProfilePanel.Dock = DockStyle.Fill;
+                plnProject.Controls.Add(mainProfilePanel);
+            }
+
+
+            if (sidebarProfilePanel != null)
+            {
+                sidebarProfilePanel.Dock = DockStyle.Fill;
+                pnlSBProject.Controls.Add(sidebarProfilePanel);
+            }
+
+        }
     }
 }

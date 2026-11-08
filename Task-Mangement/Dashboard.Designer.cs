@@ -35,6 +35,7 @@
             this.btnSignOut = new System.Windows.Forms.Button();
             this.lblNumNotif = new System.Windows.Forms.Label();
             this.btnNotifications = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.btnWorkFlowBoard = new System.Windows.Forms.Button();
             this.btnProjects = new System.Windows.Forms.Button();
             this.lblTaskify = new System.Windows.Forms.Label();
@@ -118,7 +119,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.newPersonalTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newProjectTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnReports = new System.Windows.Forms.Button();
             this.pnlSBMainDashboard.SuspendLayout();
             this.plnMainDashboard.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -150,7 +150,7 @@
             this.pnlSBMainDashboard.Controls.Add(this.btnSignOut);
             this.pnlSBMainDashboard.Controls.Add(this.lblNumNotif);
             this.pnlSBMainDashboard.Controls.Add(this.btnNotifications);
-            this.pnlSBMainDashboard.Controls.Add(this.btnReports);
+            this.pnlSBMainDashboard.Controls.Add(this.btnProfile);
             this.pnlSBMainDashboard.Controls.Add(this.btnWorkFlowBoard);
             this.pnlSBMainDashboard.Controls.Add(this.btnProjects);
             this.pnlSBMainDashboard.Controls.Add(this.lblTaskify);
@@ -241,6 +241,26 @@
             this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotifications.UseVisualStyleBackColor = false;
             this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.AutoSize = true;
+            this.btnProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(12, 201);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Padding = new System.Windows.Forms.Padding(2);
+            this.btnProfile.Size = new System.Drawing.Size(231, 35);
+            this.btnProfile.TabIndex = 9;
+            this.btnProfile.Text = "●  Profile";
+            this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnWorkFlowBoard
             // 
@@ -1413,26 +1433,6 @@
             this.newProjectTaskToolStripMenuItem.Text = "New Project Task";
             this.newProjectTaskToolStripMenuItem.Click += new System.EventHandler(this.newProjectTaskToolStripMenuItem_Click);
             // 
-            // btnReports
-            // 
-            this.btnReports.AutoSize = true;
-            this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
-            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(12, 201);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Padding = new System.Windows.Forms.Padding(2);
-            this.btnReports.Size = new System.Drawing.Size(231, 35);
-            this.btnReports.TabIndex = 9;
-            this.btnReports.Text = "●  Profile";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = false;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1574,6 +1574,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem newPersonalTaskToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newProjectTaskToolStripMenuItem;
-        private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnProfile;
     }
 }

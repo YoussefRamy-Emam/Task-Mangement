@@ -24,7 +24,7 @@
             this.pnlSBNotif = new System.Windows.Forms.Panel();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnNotifications = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.btnWorkFlowBoard = new System.Windows.Forms.Button();
             this.btnProjects = new System.Windows.Forms.Button();
             this.lblTaskify = new System.Windows.Forms.Label();
@@ -153,7 +153,7 @@
             this.pnlSBNotif.Controls.Add(this.btnSignOut);
             this.pnlSBNotif.Controls.Add(this.lblNumNotif);
             this.pnlSBNotif.Controls.Add(this.btnNotifications);
-            this.pnlSBNotif.Controls.Add(this.btnReports);
+            this.pnlSBNotif.Controls.Add(this.btnProfile);
             this.pnlSBNotif.Controls.Add(this.btnWorkFlowBoard);
             this.pnlSBNotif.Controls.Add(this.btnProjects);
             this.pnlSBNotif.Controls.Add(this.lblTaskify);
@@ -204,24 +204,25 @@
             this.btnNotifications.UseVisualStyleBackColor = false;
             this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
             // 
-            // btnReports
+            // btnProfile
             // 
-            this.btnReports.AutoSize = true;
-            this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
-            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(12, 201);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Padding = new System.Windows.Forms.Padding(2);
-            this.btnReports.Size = new System.Drawing.Size(231, 35);
-            this.btnReports.TabIndex = 9;
-            this.btnReports.Text = "●  Profile";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnProfile.AutoSize = true;
+            this.btnProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(12, 201);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Padding = new System.Windows.Forms.Padding(2);
+            this.btnProfile.Size = new System.Drawing.Size(231, 35);
+            this.btnProfile.TabIndex = 9;
+            this.btnProfile.Text = "●  Profile";
+            this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnWorkFlowBoard
             // 
@@ -1205,7 +1206,7 @@
         private System.Windows.Forms.Panel pnlSBNotif;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Button btnNotifications;
-        private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnWorkFlowBoard;
         private System.Windows.Forms.Button btnProjects;
         private System.Windows.Forms.Label lblTaskify;

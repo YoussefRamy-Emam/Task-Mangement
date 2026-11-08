@@ -201,6 +201,7 @@
             this.btnNotifications.Text = "●  Notifications";
             this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotifications.UseVisualStyleBackColor = false;
+            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
             // 
             // btnWorkFlowBoard
             // 
@@ -220,6 +221,7 @@
             this.btnWorkFlowBoard.Text = "●  WorkFlow Board";
             this.btnWorkFlowBoard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWorkFlowBoard.UseVisualStyleBackColor = false;
+            this.btnWorkFlowBoard.Click += new System.EventHandler(this.btnWorkFlowBoard_Click);
             // 
             // btnProjects
             // 
@@ -239,6 +241,7 @@
             this.btnProjects.Text = "●  Projects";
             this.btnProjects.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProjects.UseVisualStyleBackColor = false;
+            this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
             // 
             // lblTaskify
             // 
@@ -297,6 +300,7 @@
             this.plnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.plnProfile.AutoScroll = true;
             this.plnProfile.BackColor = System.Drawing.Color.WhiteSmoke;
             this.plnProfile.Controls.Add(this.passwordCard);
             this.plnProfile.Controls.Add(this.accountCard);
