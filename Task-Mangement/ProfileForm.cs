@@ -29,8 +29,8 @@ namespace Task_Mangement
 
         private void btnNavDashboard_Click(object sender, EventArgs e)
         {
-            plnProfile.Controls.Clear();
             ProfileBar.Controls.Clear();
+            plnProfile.Controls.Clear();
 
             Project projects = new Project();
 
@@ -49,7 +49,7 @@ namespace Task_Mangement
             if (sidebarProjectPanel != null)
             {
                 sidebarProjectPanel.Dock = DockStyle.Fill;
-                plnSBProfile.Controls.Add(sidebarProjectPanel);
+                ProfileBar.Controls.Add(sidebarProjectPanel);
             }
         }
 

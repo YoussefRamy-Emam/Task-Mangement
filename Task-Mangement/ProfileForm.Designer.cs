@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Panel ProfileBar;
+            this.ProfileBar = new System.Windows.Forms.Panel();
             this.btnProfile = new System.Windows.Forms.Button();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
@@ -79,8 +79,7 @@
             this.openTasksStatValueLabel = new System.Windows.Forms.Label();
             this.completedStatLabel = new System.Windows.Forms.Label();
             this.completedStatValueLabel = new System.Windows.Forms.Label();
-            ProfileBar = new System.Windows.Forms.Panel();
-            ProfileBar.SuspendLayout();
+            this.ProfileBar.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.plnProfile.SuspendLayout();
             this.passwordCard.SuspendLayout();
@@ -90,25 +89,25 @@
             // 
             // ProfileBar
             // 
-            ProfileBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
-            ProfileBar.Controls.Add(this.btnProfile);
-            ProfileBar.Controls.Add(this.lblEmail);
-            ProfileBar.Controls.Add(this.lblUserName);
-            ProfileBar.Controls.Add(this.btnSignOut);
-            ProfileBar.Controls.Add(this.lblNumNotif);
-            ProfileBar.Controls.Add(this.btnNotifications);
-            ProfileBar.Controls.Add(this.btnWorkFlowBoard);
-            ProfileBar.Controls.Add(this.btnProjects);
-            ProfileBar.Controls.Add(this.lblTaskify);
-            ProfileBar.Controls.Add(this.btnNavDashboard);
-            ProfileBar.Dock = System.Windows.Forms.DockStyle.Left;
-            ProfileBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
-            ProfileBar.Location = new System.Drawing.Point(0, 0);
-            ProfileBar.Margin = new System.Windows.Forms.Padding(0);
-            ProfileBar.Name = "ProfileBar";
-            ProfileBar.Size = new System.Drawing.Size(256, 753);
-            ProfileBar.TabIndex = 2;
-            ProfileBar.Paint += new System.Windows.Forms.PaintEventHandler(this.ProfileBar_Paint);
+            this.ProfileBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
+            this.ProfileBar.Controls.Add(this.btnProfile);
+            this.ProfileBar.Controls.Add(this.lblEmail);
+            this.ProfileBar.Controls.Add(this.lblUserName);
+            this.ProfileBar.Controls.Add(this.btnSignOut);
+            this.ProfileBar.Controls.Add(this.lblNumNotif);
+            this.ProfileBar.Controls.Add(this.btnNotifications);
+            this.ProfileBar.Controls.Add(this.btnWorkFlowBoard);
+            this.ProfileBar.Controls.Add(this.btnProjects);
+            this.ProfileBar.Controls.Add(this.lblTaskify);
+            this.ProfileBar.Controls.Add(this.btnNavDashboard);
+            this.ProfileBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ProfileBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(37)))), ((int)(((byte)(64)))));
+            this.ProfileBar.Location = new System.Drawing.Point(0, 0);
+            this.ProfileBar.Margin = new System.Windows.Forms.Padding(0);
+            this.ProfileBar.Name = "ProfileBar";
+            this.ProfileBar.Size = new System.Drawing.Size(256, 753);
+            this.ProfileBar.TabIndex = 2;
+            this.ProfileBar.Paint += new System.Windows.Forms.PaintEventHandler(this.ProfileBar_Paint);
             // 
             // btnProfile
             // 
@@ -739,13 +738,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1382, 753);
-            this.Controls.Add(ProfileBar);
+            this.Controls.Add(this.ProfileBar);
             this.Controls.Add(this.plnProfile);
             this.Name = "ProfileForm";
             this.Text = "ProfileForm";
             this.Load += new System.EventHandler(this.ProfileForm_Load);
-            ProfileBar.ResumeLayout(false);
-            ProfileBar.PerformLayout();
+            this.ProfileBar.ResumeLayout(false);
+            this.ProfileBar.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.plnProfile.ResumeLayout(false);
             this.plnProfile.PerformLayout();
@@ -810,5 +809,6 @@
         private System.Windows.Forms.Label passwordMismatchLabel;
         private System.Windows.Forms.Label passwordHelpLabel;
         private System.Windows.Forms.Button updatePasswordButton;
+        private System.Windows.Forms.Panel ProfileBar;
     }
 }
