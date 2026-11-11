@@ -52,8 +52,6 @@
             this.newPasswordTextBox = new System.Windows.Forms.TextBox();
             this.confirmPasswordLabel = new System.Windows.Forms.Label();
             this.confirmPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.passwordMismatchIconLabel = new System.Windows.Forms.Label();
-            this.passwordMismatchLabel = new System.Windows.Forms.Label();
             this.passwordHelpLabel = new System.Windows.Forms.Label();
             this.updatePasswordButton = new System.Windows.Forms.Button();
             this.accountCard = new System.Windows.Forms.Panel();
@@ -79,12 +77,17 @@
             this.openTasksStatValueLabel = new System.Windows.Forms.Label();
             this.completedStatLabel = new System.Windows.Forms.Label();
             this.completedStatValueLabel = new System.Windows.Forms.Label();
+            this.errorProviderUser_Email = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderPass = new System.Windows.Forms.ErrorProvider(this.components);
+            this.checkBox_ShowPass = new System.Windows.Forms.CheckBox();
             this.ProfileBar.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.plnProfile.SuspendLayout();
             this.passwordCard.SuspendLayout();
             this.accountCard.SuspendLayout();
             this.summaryCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUser_Email)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPass)).BeginInit();
             this.SuspendLayout();
             // 
             // ProfileBar
@@ -167,6 +170,7 @@
             this.btnSignOut.TabIndex = 11;
             this.btnSignOut.Text = "Sign out";
             this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // lblNumNotif
             // 
@@ -316,6 +320,7 @@
             // 
             this.passwordCard.BackColor = System.Drawing.Color.White;
             this.passwordCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passwordCard.Controls.Add(this.checkBox_ShowPass);
             this.passwordCard.Controls.Add(this.passwordTitleLabel);
             this.passwordCard.Controls.Add(this.currentPasswordLabel);
             this.passwordCard.Controls.Add(this.currentPasswordTextBox);
@@ -323,8 +328,6 @@
             this.passwordCard.Controls.Add(this.newPasswordTextBox);
             this.passwordCard.Controls.Add(this.confirmPasswordLabel);
             this.passwordCard.Controls.Add(this.confirmPasswordTextBox);
-            this.passwordCard.Controls.Add(this.passwordMismatchIconLabel);
-            this.passwordCard.Controls.Add(this.passwordMismatchLabel);
             this.passwordCard.Controls.Add(this.passwordHelpLabel);
             this.passwordCard.Controls.Add(this.updatePasswordButton);
             this.passwordCard.Location = new System.Drawing.Point(392, 461);
@@ -414,28 +417,6 @@
             this.confirmPasswordTextBox.TabIndex = 6;
             this.confirmPasswordTextBox.Text = "Different123";
             // 
-            // passwordMismatchIconLabel
-            // 
-            this.passwordMismatchIconLabel.AutoSize = true;
-            this.passwordMismatchIconLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.passwordMismatchIconLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.passwordMismatchIconLabel.Location = new System.Drawing.Point(391, 241);
-            this.passwordMismatchIconLabel.Name = "passwordMismatchIconLabel";
-            this.passwordMismatchIconLabel.Size = new System.Drawing.Size(18, 20);
-            this.passwordMismatchIconLabel.TabIndex = 7;
-            this.passwordMismatchIconLabel.Text = "●";
-            // 
-            // passwordMismatchLabel
-            // 
-            this.passwordMismatchLabel.AutoSize = true;
-            this.passwordMismatchLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.passwordMismatchLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.passwordMismatchLabel.Location = new System.Drawing.Point(410, 243);
-            this.passwordMismatchLabel.Name = "passwordMismatchLabel";
-            this.passwordMismatchLabel.Size = new System.Drawing.Size(181, 20);
-            this.passwordMismatchLabel.TabIndex = 8;
-            this.passwordMismatchLabel.Text = "Passwords do not match";
-            // 
             // passwordHelpLabel
             // 
             this.passwordHelpLabel.AutoSize = true;
@@ -461,6 +442,7 @@
             this.updatePasswordButton.TabIndex = 10;
             this.updatePasswordButton.Text = "Update password";
             this.updatePasswordButton.UseVisualStyleBackColor = false;
+            this.updatePasswordButton.Click += new System.EventHandler(this.updatePasswordButton_Click);
             // 
             // accountCard
             // 
@@ -571,6 +553,7 @@
             this.saveChangesButton.TabIndex = 7;
             this.saveChangesButton.Text = "Save changes";
             this.saveChangesButton.UseVisualStyleBackColor = false;
+            this.saveChangesButton.Click += new System.EventHandler(this.saveChangesButton_Click);
             // 
             // pageTitleLabel
             // 
@@ -736,6 +719,28 @@
             this.completedStatValueLabel.Text = "2";
             this.completedStatValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // errorProviderUser_Email
+            // 
+            this.errorProviderUser_Email.ContainerControl = this;
+            // 
+            // errorProviderPass
+            // 
+            this.errorProviderPass.ContainerControl = this;
+            // 
+            // checkBox_ShowPass
+            // 
+            this.checkBox_ShowPass.AutoSize = true;
+            this.checkBox_ShowPass.Checked = true;
+            this.checkBox_ShowPass.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_ShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox_ShowPass.Location = new System.Drawing.Point(25, 228);
+            this.checkBox_ShowPass.Name = "checkBox_ShowPass";
+            this.checkBox_ShowPass.Size = new System.Drawing.Size(124, 20);
+            this.checkBox_ShowPass.TabIndex = 18;
+            this.checkBox_ShowPass.Text = "Show password";
+            this.checkBox_ShowPass.UseVisualStyleBackColor = true;
+            this.checkBox_ShowPass.CheckedChanged += new System.EventHandler(this.checkBox_ShowPass_CheckedChanged);
+            // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -758,6 +763,8 @@
             this.accountCard.PerformLayout();
             this.summaryCard.ResumeLayout(false);
             this.summaryCard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUser_Email)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -809,10 +816,11 @@
         private System.Windows.Forms.TextBox newPasswordTextBox;
         private System.Windows.Forms.Label confirmPasswordLabel;
         private System.Windows.Forms.TextBox confirmPasswordTextBox;
-        private System.Windows.Forms.Label passwordMismatchIconLabel;
-        private System.Windows.Forms.Label passwordMismatchLabel;
         private System.Windows.Forms.Label passwordHelpLabel;
         private System.Windows.Forms.Button updatePasswordButton;
         private System.Windows.Forms.Panel ProfileBar;
+        private System.Windows.Forms.ErrorProvider errorProviderUser_Email;
+        private System.Windows.Forms.ErrorProvider errorProviderPass;
+        private System.Windows.Forms.CheckBox checkBox_ShowPass;
     }
 }

@@ -136,10 +136,14 @@ namespace Task_Mangement
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Yes;
+            this.Hide();
+            Login loginForm = new Login();
+
 
             
-            this.Close();
+                this.DialogResult = DialogResult.Yes;
+                this.Close();
+            
         }
 
         private void btnProjects_Click(object sender, EventArgs e)

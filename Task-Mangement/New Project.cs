@@ -40,6 +40,7 @@ namespace Task_Mangement
         private void btnCancel_Click(object sender, EventArgs e)
         {
 
+            this.Close();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -50,6 +51,13 @@ namespace Task_Mangement
         private void label25_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCreateProject_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The Project has been saved successfully.!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            this.Close();
         }
     }
 }

@@ -29,25 +29,7 @@ namespace Task_Mangement
 
         private void btnNavDashboard_Click(object sender, EventArgs e)
         {
-            //ProfileBar.Controls.Clear();
-            //plnProfile.Controls.Clear();
-
-            //Dashboard dashboardForm = new Dashboard();
-
-            //Control mainDashPanel = dashboardForm.Controls["plnMainDashboard"];
-            //Control sidebarDashPanel = dashboardForm.Controls["pnlSBMainDashboard"];
-
-            //if (mainDashPanel != null)
-            //{
-            //    mainDashPanel.Dock = DockStyle.Fill;
-            //    sidebarDashPanel.Controls.Add(mainDashPanel);
-            //}
-
-            //if (sidebarDashPanel != null)
-            //{
-            //    sidebarDashPanel.Dock = DockStyle.Fill;
-            //    sidebarDashPanel.Controls.Add(sidebarDashPanel);
-            //}
+            
             plnProfile.Controls.Clear();
             ProfileBar.Controls.Clear();
 
@@ -81,6 +63,7 @@ namespace Task_Mangement
             ProfileBar.Controls.Clear();
             plnProfile.Controls.Clear();
 
+
             Notifications notificationsForm = new Notifications();
 
             Control[] mainNotifSearch = notificationsForm.Controls.Find("pnlMainNotif", true);
@@ -90,7 +73,7 @@ namespace Task_Mangement
             {
                 Control mainNotifPanel = mainNotifSearch[0];
                 mainNotifPanel.Dock = DockStyle.Fill;
-                ProfileBar.Controls.Add(mainNotifPanel);
+                plnProfile.Controls.Add(mainNotifPanel);
 
                 mainNotifPanel.BringToFront();
             }
@@ -104,6 +87,8 @@ namespace Task_Mangement
 
                 sideNotifPanel.BringToFront();
             }
+
+
         }
 
         private void btnWorkFlowBoard_Click(object sender, EventArgs e)
@@ -155,6 +140,103 @@ namespace Task_Mangement
             {
                 sidebarProjectPanel.Dock = DockStyle.Fill;
                 ProfileBar.Controls.Add(sidebarProjectPanel);
+            }
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Yes;
+
+
+            this.Close();
+        }
+
+        private void saveChangesButton_Click(object sender, EventArgs e)
+        {
+            errorProviderUser_Email.Clear();
+            bool isValid = true;
+
+            // 2. التحقق من حقل الاسم الكامل (Full Name)
+            if (string.IsNullOrWhiteSpace(fullNameTextBox.Text))
+            {
+                errorProviderUser_Email.SetError(fullNameTextBox, "Please enter your full name.");
+                isValid = false;
+            }
+
+            // 3. التحقق من حقل اسم المستخدم (Username)
+            if (string.IsNullOrWhiteSpace(usernameTextBox.Text))
+            {
+                errorProviderUser_Email.SetError(usernameTextBox, "Please enter a username.");
+                isValid = false;
+            }
+
+            // 4. التحقق من حقل البريد الإلكتروني (Email)
+            if (string.IsNullOrWhiteSpace(emailTextBox.Text) || !emailTextBox.Text.Contains("@"))
+            {
+                errorProviderUser_Email.SetError(emailTextBox, "Please enter a valid email address.");
+                isValid = false;
+            }
+
+        }
+
+        private void updatePasswordButton_Click(object sender, EventArgs e)
+        {
+
+            errorProviderPass.Clear();
+            bool isValidPass = true;
+
+            if (currentPasswordTextBox.Text == newPasswordTextBox.Text)
+            {
+                MessageBox.Show("Please enter diffrent password this same password.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(newPasswordTextBox.Text) || !string.IsNullOrEmpty(confirmPasswordTextBox.Text))
+                {
+                    if (newPasswordTextBox.Text.Length < 8)
+                    {
+                        errorProviderUser_Email.SetError(newPasswordTextBox, "Password must be at least 8 characters long.");
+                        isValidPass = false;
+                    }
+
+                    if (newPasswordTextBox.Text != confirmPasswordTextBox.Text)
+                    {
+                        errorProviderUser_Email.SetError(confirmPasswordTextBox, "Passwords do not match.");
+                        isValidPass = false;
+                    }
+                }
+
+
+                if (!isValidPass)
+                {
+                    MessageBox.Show("Please correct the highlighted errors and try again.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    // هنا يتم حفظ البيانات بنجاح في قاعدة البيانات أو التعديل
+                    MessageBox.Show("Changes saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // لو حابب تقفل الشاشة أو تحدث البيانات
+                    // this.Close();
+                }
+            }
+            
+        }
+
+        private void checkBox_ShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_ShowPass.Checked)
+            {
+                currentPasswordTextBox.UseSystemPasswordChar = false;
+                newPasswordTextBox.UseSystemPasswordChar = false;
+                confirmPasswordTextBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                currentPasswordTextBox.UseSystemPasswordChar = true;
+                newPasswordTextBox.UseSystemPasswordChar = true;
+                confirmPasswordTextBox.UseSystemPasswordChar = true;
             }
         }
     }

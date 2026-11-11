@@ -277,7 +277,8 @@ namespace Task_Mangement
 
         private void btnNewProject_Click(object sender, EventArgs e)
         {
-
+            New_Project newProjectForm = new New_Project();
+            newProjectForm.ShowDialog();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -342,7 +343,10 @@ namespace Task_Mangement
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Yes;
 
+
+            this.Close();
         }
 
         private void lblNumNotif_Click(object sender, EventArgs e)
@@ -455,6 +459,24 @@ namespace Task_Mangement
                 pnlSBProject.Controls.Add(sidebarProfilePanel);
             }
 
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            TeamMember teamMemberForm = new TeamMember();
+            teamMemberForm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReportProjectTeam reportProjectForm = new ReportProjectTeam();
+            reportProjectForm.ShowDialog();
+        }
+
+        private void btnReportProject_Click(object sender, EventArgs e)
+        {
+            ReportProjectTeam reportProjectForm = new ReportProjectTeam();
+            reportProjectForm.ShowDialog();
         }
     }
 }

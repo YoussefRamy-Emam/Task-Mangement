@@ -37,6 +37,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btlprojectdeadline = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRemovethird = new System.Windows.Forms.Button();
+            this.btnRemoveSec = new System.Windows.Forms.Button();
             this.txtadd = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblOwner = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnCreateProject = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnRemoveSec = new System.Windows.Forms.Button();
-            this.btnRemovethird = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -167,6 +167,30 @@
             this.panel2.Size = new System.Drawing.Size(591, 300);
             this.panel2.TabIndex = 22;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnRemovethird
+            // 
+            this.btnRemovethird.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnRemovethird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemovethird.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRemovethird.Location = new System.Drawing.Point(478, 187);
+            this.btnRemovethird.Name = "btnRemovethird";
+            this.btnRemovethird.Size = new System.Drawing.Size(88, 40);
+            this.btnRemovethird.TabIndex = 77;
+            this.btnRemovethird.Text = "Remove";
+            this.btnRemovethird.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoveSec
+            // 
+            this.btnRemoveSec.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnRemoveSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveSec.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRemoveSec.Location = new System.Drawing.Point(478, 130);
+            this.btnRemoveSec.Name = "btnRemoveSec";
+            this.btnRemoveSec.Size = new System.Drawing.Size(88, 40);
+            this.btnRemoveSec.TabIndex = 76;
+            this.btnRemoveSec.Text = "Remove";
+            this.btnRemoveSec.UseVisualStyleBackColor = true;
             // 
             // txtadd
             // 
@@ -345,6 +369,7 @@
             this.btnCreateProject.TabIndex = 25;
             this.btnCreateProject.Text = "Create Project";
             this.btnCreateProject.UseVisualStyleBackColor = false;
+            this.btnCreateProject.Click += new System.EventHandler(this.btnCreateProject_Click);
             // 
             // btnCancel
             // 
@@ -357,30 +382,6 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnRemoveSec
-            // 
-            this.btnRemoveSec.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnRemoveSec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveSec.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRemoveSec.Location = new System.Drawing.Point(478, 130);
-            this.btnRemoveSec.Name = "btnRemoveSec";
-            this.btnRemoveSec.Size = new System.Drawing.Size(88, 40);
-            this.btnRemoveSec.TabIndex = 76;
-            this.btnRemoveSec.Text = "Remove";
-            this.btnRemoveSec.UseVisualStyleBackColor = true;
-            // 
-            // btnRemovethird
-            // 
-            this.btnRemovethird.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnRemovethird.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemovethird.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRemovethird.Location = new System.Drawing.Point(478, 187);
-            this.btnRemovethird.Name = "btnRemovethird";
-            this.btnRemovethird.Size = new System.Drawing.Size(88, 40);
-            this.btnRemovethird.TabIndex = 77;
-            this.btnRemovethird.Text = "Remove";
-            this.btnRemovethird.UseVisualStyleBackColor = true;
             // 
             // New_Project
             // 

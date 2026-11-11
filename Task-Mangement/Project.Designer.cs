@@ -34,10 +34,6 @@
             this.newPersonalTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.plnProject = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -68,6 +64,8 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.btnNewProject = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReportProject = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -140,10 +138,6 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.textBoxSearch);
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.label31);
-            this.panel2.Controls.Add(this.label30);
             this.panel2.Controls.Add(this.label28);
             this.panel2.Controls.Add(this.label29);
             this.panel2.Controls.Add(this.label26);
@@ -176,62 +170,6 @@
             this.panel2.Size = new System.Drawing.Size(478, 506);
             this.panel2.TabIndex = 32;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.ForeColor = System.Drawing.Color.DarkGray;
-            this.textBoxSearch.Location = new System.Drawing.Point(30, 425);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(316, 34);
-            this.textBoxSearch.TabIndex = 83;
-            this.textBoxSearch.Text = "Name@example.com";
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.AutoSize = true;
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(111)))), ((int)(((byte)(237)))));
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(111)))), ((int)(((byte)(237)))));
-            this.btnAdd.FlatAppearance.BorderSize = 3;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(352, 425);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Padding = new System.Windows.Forms.Padding(2);
-            this.btnAdd.Size = new System.Drawing.Size(111, 37);
-            this.btnAdd.TabIndex = 82;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // label31
-            // 
-            this.label31.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label31.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label31.Location = new System.Drawing.Point(26, 347);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(427, 30);
-            this.label31.TabIndex = 79;
-            this.label31.Text = "____________________________________________________________";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label31.Click += new System.EventHandler(this.label31_Click);
-            // 
-            // label30
-            // 
-            this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label30.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(26, 377);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(403, 30);
-            this.label30.TabIndex = 78;
-            this.label30.Text = "Add member by Email";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label30.Click += new System.EventHandler(this.label30_Click_1);
             // 
             // label28
             // 
@@ -609,6 +547,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnReportProject);
+            this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -624,6 +564,44 @@
             this.panel1.Size = new System.Drawing.Size(568, 206);
             this.panel1.TabIndex = 31;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnReportProject
+            // 
+            this.btnReportProject.AutoSize = true;
+            this.btnReportProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(111)))), ((int)(((byte)(237)))));
+            this.btnReportProject.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(111)))), ((int)(((byte)(237)))));
+            this.btnReportProject.FlatAppearance.BorderSize = 3;
+            this.btnReportProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportProject.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportProject.ForeColor = System.Drawing.Color.White;
+            this.btnReportProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportProject.Location = new System.Drawing.Point(467, 140);
+            this.btnReportProject.Name = "btnReportProject";
+            this.btnReportProject.Padding = new System.Windows.Forms.Padding(2);
+            this.btnReportProject.Size = new System.Drawing.Size(85, 43);
+            this.btnReportProject.TabIndex = 31;
+            this.btnReportProject.Text = "Report";
+            this.btnReportProject.UseVisualStyleBackColor = false;
+            this.btnReportProject.Click += new System.EventHandler(this.btnReportProject_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.AutoSize = true;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(111)))), ((int)(((byte)(237)))));
+            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(111)))), ((int)(((byte)(237)))));
+            this.btnEdit.FlatAppearance.BorderSize = 3;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(370, 140);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Size = new System.Drawing.Size(79, 43);
+            this.btnEdit.TabIndex = 30;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // label3
             // 
@@ -946,6 +924,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.pnlSBProject.ResumeLayout(false);
             this.pnlSBProject.PerformLayout();
             this.ResumeLayout(false);
@@ -959,10 +938,6 @@
         private System.Windows.Forms.ToolStripMenuItem newPersonalTaskToolStripMenuItem;
         private System.Windows.Forms.Panel plnProject;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label26;
@@ -1013,5 +988,7 @@
         private System.Windows.Forms.Button btnProjects;
         private System.Windows.Forms.Label lblTaskify;
         private System.Windows.Forms.Button btnNavDashboard;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnReportProject;
     }
 }

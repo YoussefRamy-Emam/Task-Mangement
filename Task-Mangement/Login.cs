@@ -127,26 +127,16 @@ namespace Task_Mangement
             {
                 MessageBox.Show("Login successfully.", "success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
 
-
-            Dashboard dashboard = new Dashboard();
 
             this.Hide();
 
-            dashboard.ShowDialog();
+            MainBarForm mainForm = new MainBarForm();
+            mainForm.ShowDialog();
+
+            this.Show();
 
             
-            if (dashboard.DialogResult == DialogResult.Yes)
-            {
-                
-                this.Show();
-            }
-            else
-            {
-                
-                Application.Exit();
-            }
         }
 
         private void checkBox_Remember_CheckedChanged(object sender, EventArgs e)
